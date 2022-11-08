@@ -78,6 +78,7 @@
 			
 			// 1. 비인가 API 인증 처리
 			$authlessList = array(	// 비인가 API list
+									"/get_all_auth",
 									"/get_api_list",
 									"/test"
 								);
@@ -314,7 +315,7 @@
 
 	$app = new CommonRestFunc();
 
-	// 비인가 API 테스트
+	// [비인가] API 테스트
 	$app->post(
 		"/test",
 		function() use($app) {
@@ -366,19 +367,19 @@
 		}
 	);
 
-	// api 리스트 전달
+	// [비인가] api 리스트 전달
 	$app->post(
 		"/get_api_list",
 		function() use($app) {
 			$app->setResponseMessage("ok");
 			$app->setResponseResult(
 						array(
-							"/test"				=> "비인가 API 테스트",
+							"/test"				=> "[비인가] API 테스트",
+							"/get_api_list"		=> "[비인가] api 리스트 전달",
+							"/get_all_auth"		=> "[비인가] 전체 Auth 전달",
 							"/auth_check"		=> "인가 API 테스트 ( key.json 의 내용을 기반으로 매칭되지 않는다면 api 사용 불가하도록 )",
 							"/get_auth_info"	=> "header로 넘어온 User 사용 권한 체크",
-							"/get_api_list"		=> "api 리스트 전달",
-							"/get_all_auth"		=> "전체 Auth 전달(비인가)",
-							"chg_auth_role"		=> "test"
+							"/chg_auth_role"	=> "권한 변경"
 						)
 			);
 			$app->setResponseCode("200");
@@ -386,7 +387,7 @@
 		}
 	);
 
-	// 전체 Auth 전달(비인가)
+	// [비인가] 전체 Auth 전달
 	$app->post(
 		"/get_all_auth",
 		function() use($app) {
