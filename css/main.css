@@ -1,0 +1,568 @@
+@charset "utf-8";
+::-webkit-scrollbar {
+	width 			: 17px; 
+	height 			: 17px; 
+	background 		: #eeeeee;
+}
+
+::-webkit-scrollbar-thumb {
+	height 			: 50px; 
+	width 			: 50px; 
+	background 		: #777777;
+}
+
+* { font-family: '맑은 고딕', 'Malgun Gothic'; }
+* {
+    user-select: none;
+}
+
+html {
+	transition-duration: 0.3s;
+	background 		: #f5f5f5;
+}
+
+body {
+	margin 			: 0;
+	display 		: flex;
+	flex-direction 	: column;
+}
+
+#header {
+	display 		: flex;
+	justify-content : center;
+	width 			: 100%;
+	min-height		: 55px;
+	max-height		: 55px;
+	background 		: #555555;
+	border-bottom	: 1px solid #cccccc;
+    min-width 		: 1820px;
+}
+
+#div_mainContents {
+	width 			: 1556px;
+	float 			: left;
+    border-top-right-radius 	: 10px;
+    border-bottom-right-radius 	: 10px;
+    border 			: 1px solid #cccccc;
+    background 		: white;
+}
+
+#header_contents {
+	width			: 1820px;
+	height 			: 55px;
+	margin			: auto;
+}
+
+#div_header_logo {
+	width 			: 250px;
+	height 			: 55px;
+	float 			: left;
+	cursor 			: pointer;
+}
+
+#img_header_logo {
+	background 		: 0;
+	height 			: 45px;
+	margin 			: 5px 0;
+}
+
+#div_header_title {
+	width 			: 1320px;
+	height 			: 45px;
+	line-height 	: 50px;
+	float 			: left;
+	font-size 		: 30pt;
+	font-weight 	: bold;
+	cursor 			: pointer;
+	text-align 		: center;
+	color 			: #ffffff;
+}
+
+#div_user_wrap {
+	width 			: 100%;
+	float 			: left;
+}
+
+#span_header_user {
+	height  		: 28px;
+	line-height		: 28px;
+	margin-right 	: 10px;
+	float 			: right;
+	font-size 		: 10pt;
+	font-weight 	: bold;
+}
+
+#div_header_user {
+	width 			: 250px;
+	height  		: 45px;
+	line-height		: 40px;
+	float 			: left;
+}
+
+#img_banner_logout {
+	height 			: 20px; 
+	margin-top	 	: 30px;
+	cursor 			: pointer;
+	float 			: right;
+}
+
+#header_user_name {
+	height 			: 20px;
+	line-height		: 20px; 
+	margin-top	 	: 30px;
+	margin-right 	: 10px;
+	padding 		: 0 10px;
+	float 			: right;
+	color 			: white;
+	font-weight 	: bold;
+}
+
+#header_version {
+	height 			: 20px;
+	line-height		: 20px; 
+	margin-top	 	: 30px;
+	padding 		: 0 10px;
+	float 			: right;
+	color 			: white;
+	font-weight 	: bold;
+    font-size 		: 10pt;
+}
+
+#contents {
+	min-width		: 1820px;
+	max-width		: 1820px;
+	display 		: flex;
+	margin			: auto;
+}
+
+#div_leftMenu {
+	flex 			: 1 1 0;
+	min-width		: 250px;
+	max-width		: 250px;
+	transition-duration: 0.3s;
+	background 		: white;
+	border 			: 1px solid #cccccc;
+	display 		: flex;
+	flex-direction 	: column;
+	overflow 		: auto;
+	float 			: left;
+	margin-right 	: 10px;
+	border-top-left-radius 	 : 10px;
+	border-bottom-left-radius: 10px;
+	background 		: #eeeeee33;
+}
+
+#footer {
+	width 			: 100%;
+	display 		: flex;
+	justify-content : center;
+	align-items 	: center;
+	float 			: left;
+}
+
+#footer_contents {
+	width			: 100%;
+	text-align		: center;
+	vertical-align	: middle;
+    font-size		: 9pt;
+    color			: #4c4b51;
+}
+
+.div_main_menu_category {
+	height			: 40px;
+	line-height		: 40px;
+	background 		: #dddddd;
+	vertical-align	: middle;
+	font-weight		: bolder;
+	font-size		: 14px;
+	display			: block;
+	float 			: right;
+	text-indent 	: 10px;
+	border-bottom 	: 1px solid #aaaaaa;
+}
+
+.div_main_menu_sub {
+	height 			: 35px;
+	line-height		: 35px;
+	float 			: right;
+	vertical-align	: middle;
+	font-size		: 12px;
+	border-bottom 	: 1px solid #aaaaaa;
+	border-left 	: 0px solid #444444;
+	padding-left 	: 5px;
+	text-indent 	: 10px;
+	font-weight		: normal;
+	background 		: #ffffff;
+	cursor			: pointer;
+}
+
+.div_main_menu_sub:hover {
+	-webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75);
+	z-index 		: 1;
+}
+
+.div_main_submenu::before {
+	content 		: "-";
+}
+
+.div_main_menu:hover {
+	font-weight		: bold;
+}
+
+.div_main_menusub:hover {
+	font-weight		: bold;
+}
+
+.div_main_submenu:hover {
+	font-weight		: bold;
+}
+
+#span_menusub {
+	float 			: right;
+	display 		: block;
+	padding-right	: 15px; 
+}
+
+.img_icon_banner {
+	height			: 18px;
+	vertical-align	: middle;
+	padding-bottom  : 5px;
+	cursor 			: pointer;
+}
+
+#div_footer_language {
+	width 			: 300px;
+	margin 			: auto;
+	text-align 		: center;
+	height			: 28px;
+	line-height		: 28px;
+	vertical-align	: middle;
+	font-weight		: bold;
+	color			: black;
+	cursor 			: pointer;
+	margin-top 		: 10px;
+}
+
+#div_footer_language:visited {
+    color			: #000000;
+}
+#div_footer_language:link {
+    color			: #000000;
+}
+#div_footer_language:active {
+    text-decoration	: none;
+}
+#div_footer_language:hover {
+    color			: #5b5b54;
+    text-decoration	: none;
+}
+
+#div_footer_language_list {
+	border 			: 1px dotted silver;
+	width			: 300px;
+	height			: 30px;
+	line-height		: 30px;
+	margin-left		: auto;
+	margin-right	: auto;
+	display			: none;
+}
+
+#div_copyright {
+	margin-top  	: 10px;
+}
+
+.a_footer_language_list {
+	cursor 			: pointer;
+}
+
+.copyright_link {
+	font-weight		: bold;
+	text-decoration	: none;
+}
+
+.copyright_link:visited {
+    color			: #000000;
+    text-decoration	: none;
+}
+.copyright_link:link {
+    color			: #000000;
+}
+.copyright_link:active {
+    text-decoration	: none;
+}
+.copyright_link:hover {
+    color			: #5b5b54;
+    text-decoration	: none;
+}
+
+#div_main_login {
+	width 			: 1820px;
+	height 			: 770px;
+	background-image: url("../img/login_background.png");
+	background-size : 1820px;
+	background-repeat: no-repeat;
+	overflow 		: hidden;
+	background-color: white;
+	border 			: 1px solid #cccccc;
+	margin-top 		: 10px;
+}
+
+#div_main_login_form {
+	background 		: #fdfdfd;
+	width 			: 340px;
+	height 			: 260px;
+	border 			: 1px solid #d2d2d2;
+	border-radius	: 5px;
+	margin 			: auto;
+	margin-top 		: 200px;
+	text-align		: center;
+}
+
+#div_login_form_title {
+	font-weight		: bolder;
+	font-size		: 24px;
+	color 			: #5b5b54;
+	margin-top 		: 15px;
+}
+
+#div_login_alert_form {
+	height			: 40px;
+}
+
+#div_login_alert {
+	border-radius   : 3px;
+	width			: 300px;
+	height			: 30px;
+	line-height		: 30px;
+	font-size		: 14px;
+	border-color	: #c15e5e;
+	border-style	: solid;
+	border-width	: 1px 1px 1px 1px;
+	margin-bottom	: 5px;
+	color			: #ce1414;
+	margin			: auto;
+	display			: none;
+}
+
+.input_login_form {
+	border-radius   : 3px;
+	width			: 200px;
+	height			: 40px;
+	font-size		: 16px;
+	border-color	: #d2d2d2;
+	border-style	: solid;
+	border-width	: 1px 1px 1px 1px;
+	margin-bottom	: 5px;
+	padding-left	: 15px;
+}
+
+#div_login_form_submit {
+	background-color: #e7e7e7;
+	border 			: 1px solid #7c7c7c;
+	color 			: #5b5b54;
+	text-align 		: center;
+	text-decoration : none;
+	display 		: inline-block;
+	cursor 			: pointer;
+	font-size 		: 14px;
+	font-weight		: bolder;
+	width			: 215px;
+	height 			: 40px;
+	line-height		: 40px;
+	border-radius	: 2px;
+	-webkit-transition-duration	: 0.1s; /* Safari */
+	transition-duration			: 0.1s;
+	margin-top 		: 15px;
+}
+
+#div_login_form_submit:hover {
+	background-color: #7f7f7f;
+	color 			: white;
+}
+
+.route_wrap {
+	margin 			: 0 auto;
+	height 			: 20px;
+	line-height		: 20px;
+	float 			: left;
+	margin-bottom 	: 3px;
+	font-size 		: 9pt;
+	border-bottom 	: 1px solid #dddddd;
+}
+
+#div_contents_wrap {
+	flex 			: 1 1 0;
+	-ms-flex 		: 1;
+	float 			: left;
+    background 		: #f5f5f5;
+    border-top-right-radius 	: 10px;
+    border-bottom-right-radius 	: 10px;
+    border 			: 1px solid #cccccc;
+}
+
+.menu_on {
+	display 		: block;
+}
+
+.menu_off {
+	display 		: none;
+}
+
+#route_category {
+	display 		: inline;
+	float 			: left;
+}
+
+#route_menu {
+	display 		: inline;
+	float 			: left;
+}
+
+#route_submenu {
+	display 		: inline;
+	float 			: left;
+}
+
+.menu_focus {
+	border-left 	: 5px solid #FF4747;
+}
+
+.route {
+	width			: 1820px;
+	margin			: auto;
+	display 		: flex;
+    justify-content : center;
+}
+
+div#viewLoading {
+	position 			: absolute;
+	top 				: 50%;
+	left 				: 50%;
+	transform 			: translate(-50%, -50%);
+	z-index				: 1;
+	display				: none;
+}
+
+div#viewBackground {
+	position 			: absolute;
+	top 				: 0%;
+	left 				: 0%;
+	width 				: 100%;
+	height 				: 100%;
+	background-color 	: #000;
+	filter 				: alpha(opacity=10);
+	-ms-filter			: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+	-moz-opacity		: 0.1;
+	-khtml-opacity		: 0.1;
+	opacity				: 0.1;
+	z-index				: 1;
+	display				: none;
+}
+
+div#percentView {
+	position 			: absolute;
+	top					: 48%;
+	left 				: 52%;
+	z-index 			: 1;
+	font-size			: 14px;
+	color				: white;
+	font-weight			: bolder;
+	display				: none;
+}
+
+.overflow_ellipsis {
+	text-overflow 	: ellipsis;
+}
+
+.tooltip {
+	max-width 		: 500px;
+	overflow 		: hidden;
+	position 		: absolute;
+	z-index 		: 150;
+	background 		: white;
+	border 			: 1px solid black;
+	padding 		: 0 5px;
+	border-radius 	: 3px;
+	-webkit-box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.75);
+}
+
+.tooltip p {
+	font-size 		: 10pt;
+	margin 			: 0;
+}
+
+.div_blur {
+	display 		: none;
+	position 		: absolute;
+	top 			: 0px;
+	left 			: 0px;
+	width 			: 100%;
+	height 			: 100%;
+	background 		: rgba(255,255,255,0.5);
+	z-index 		: 200;
+}
+
+.system_check {
+	display 		: none;
+	justify-content : center;
+	align-items 	: center;
+	position 		: absolute;
+	top 			: 50%;
+	left 			: 50%;
+	margin 			: -200px 0 0 -400px;
+	width 			: 800px;
+	height 			: 400px;
+	border 			: 3px solid #777777;
+	background 		: white;
+	z-index 		: 201;
+	font-size 		: 24pt;
+	font-weight 	: bolder; 
+	background-image: url("/img/background_login.png");
+	background-size : cover;
+}
+
+.system_check div {
+	text-align 	 	: center;
+}
+
+.dialog {
+	text-align 		: center;
+	min-height 		: 0 !important;
+}
+
+.dialog p {
+	font-size 		: 10pt;
+}
+
+.dialog_confirm p {
+	font-size 		: 10pt;
+}
+
+.div_main_menu_viewer {
+	padding 		: 5px 0 5px 20px;
+	overflow 		: hidden;
+	border-bottom	: 0px solid #e7e7e7;
+}
+
+.span_main_menu_view_title {
+	height 			: 20px;
+	line-height		: 20px;
+	width			: 200px;
+	float 			: left;
+	vertical-align	: middle;
+	font-size		: 13px;
+	font-weight		: bolder;
+}
+
+.span_main_menu_view {
+	height 			: 20px;
+	width			: 200px;
+	float 			: left;
+	vertical-align	: middle;
+	font-size		: 12px;
+	font-weight		: normal;
+}

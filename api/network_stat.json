@@ -1,0 +1,35 @@
+{
+    "tabStat": "primary",
+    "hostname": "Network Converter",
+    "location": "-",
+    "network_primary": {
+        "view": "enabled",
+        "use": "enabled",
+        "dhcp": "off",
+        "mac_address": "00:1d:1d:01:9d:02",
+        "ip_address": "192.168.47.75",
+        "subnetmask": "255.255.254.0",
+        "gateway": "192.168.47.1",
+        "dns_server_1": "8.8.8.8",
+        "dns_server_2": "8.8.4.4"
+    },
+    "network_secondary": {
+        "view": "enabled",
+        "use": "disabled",
+        "dhcp": "on",
+        "ip_address": "",
+        "mac_address": "00:1d:1d:01:9d:03",
+        "subnetmask": "",
+        "gateway": "",
+        "dns_server_1": "",
+        "dns_server_2": ""
+    },
+    "network_bonding": {
+        "view": "enabled",
+        "use": "disabled",
+        "mac_address": "ce:8f:c0:a1:54:b4",
+        "ip_address": "192.168.1.254",
+        "subnetmask": "255.255.255.0",
+        "gateway": "192.168.1.1"
+    }
+}
